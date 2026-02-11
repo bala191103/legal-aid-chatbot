@@ -1,0 +1,264 @@
+"""
+Sample Legal Content for Testing
+This file contains legal information for initial testing
+Can be converted to PDF for document upload testing
+"""
+
+SAMPLE_LEGAL_CONTENT = """
+================================================================================
+THE CONSTITUTION OF INDIA - FUNDAMENTAL RIGHTS
+================================================================================
+
+PART III: FUNDAMENTAL RIGHTS
+(Articles 12 to 35)
+
+================================================================================
+ARTICLE 14: EQUALITY BEFORE LAW
+================================================================================
+
+The State shall not deny to any person equality before the law or 
+the equal protection of the laws within the territory of India.
+
+Equality before the law means that the law applies equally to all citizens, 
+regardless of their status, wealth, or social position.
+
+================================================================================
+ARTICLE 19: FREEDOM OF SPEECH AND EXPRESSION
+================================================================================
+
+(1) All citizens shall have the right to—
+    (a) freedom of speech and expression;
+    (b) freedom of peaceful assembly without arms;
+    (c) freedom of association;
+
+(2) Nothing in sub-clause (a) of clause (1) shall apply to any existing law, 
+or to any law which the State may make, in so far as such law imposes reasonable 
+restrictions on the exercise of the right conferred by the said sub-clause in 
+the interests of the security of the State, public order, decency or morality.
+
+================================================================================
+ARTICLE 21: RIGHT TO LIFE AND LIBERTY
+================================================================================
+
+No person shall be deprived of his life or personal liberty except according 
+to procedure established by law.
+
+This is considered one of the most important fundamental rights. It ensures 
+that every person has a right to life with dignity and cannot be arbitrarily 
+deprived of life or liberty.
+
+================================================================================
+ARTICLE 21-A: RIGHT TO FREE AND COMPULSORY EDUCATION
+================================================================================
+
+The State shall provide free and compulsory education to all children of the 
+age of six to fourteen years in such manner as the State may, by law, determine.
+
+This right ensures that every child has access to quality education, which is 
+essential for their development and future prospects.
+
+================================================================================
+SECTION 2: DEFINITIONS (INDIAN PENAL CODE, 1860)
+================================================================================
+
+For the purposes of this Code, the following definitions apply:
+
+"Act" includes any part of an act.
+
+"Offence" means any act or omission made punishable by any law for the time 
+being in force in India.
+
+"Person" includes any company or association or body of individuals, whether 
+incorporated or not.
+
+"Criminal breach of trust" occurs when a person, being in any manner entrusted 
+with property, or with any dominion over property in their capacity as a public 
+servant or in any other capacity, commits breach of trust in respect of that 
+property.
+
+================================================================================
+SECTION 420: CHEATING AND DISHONESTLY INDUCING DELIVERY OF PROPERTY
+================================================================================
+
+Whoever cheats and by virtue of such cheating induces the person deceived to 
+deliver any property to any person, or to make, alter or destroy the whole or 
+any part of a valuable security, or anything which is signed or sealed, and 
+which is capable of being converted into a valuable security, shall be punished 
+with imprisonment of either description for a term which may extend to seven 
+years, and shall also be liable to fine.
+
+Explanation: "Cheating" is designedly acting with the intention of deceiving, 
+or knowing that by the act is likely to deceive.
+
+================================================================================
+THE INDIAN CONTRACT ACT, 1872 - ESSENTIAL ELEMENTS OF A CONTRACT
+================================================================================
+
+Section 1: Definition of Contract
+
+An agreement enforceable by law is a contract. The Indian Contract Act, 1872 
+defines the formation and enforcement of contracts in India.
+
+Section 2(a): Offer
+
+When one person signifies to another his willingness to do or to abstain from 
+doing anything, with a view to obtaining the assent of that other to such act 
+or abstention, he is said to make an offer.
+
+Section 2(b): Acceptance
+
+When the person to whom the offer is made signifies his assent thereto, the 
+offer is said to be accepted; and the person making the offer and the person 
+accepting the offer are said to agree, and are respectively called as 'offeror' 
+and 'offeree'.
+
+Section 2(h): Consideration
+
+When at the desire of the promisor the promisee or any other person has done or 
+abstained from doing, or does or abstains from doing, or promises to do or to 
+abstain from doing something, such act or abstention or promise is called a 
+consideration for the promise.
+
+================================================================================
+HINDU MARRIAGE ACT, 1955 - GROUNDS FOR DIVORCE
+================================================================================
+
+Section 13: Grounds for Divorce
+
+(1) Any marriage solemnized, whether before or after the commencement of this 
+Act, may be dissolved by a decree of divorce on the petition of either the 
+husband or the wife on any one or more of the following grounds, namely:
+
+(a) that the other party has, after the solemnization of the marriage, had 
+    voluntary sexual intercourse with any person other than his or her spouse;
+
+(b) that the other party has deserted the petitioner for a continuous period of 
+    not less than two years immediately preceding the presentation of the petition;
+
+(c) that the other party has treated the petitioner with such cruelty as to cause 
+    apprehension that it would be unsafe for the petitioner to live with the other party;
+
+(d) that the other party has been incurably of unsound mind, or has been suffering 
+    continuously or intermittently from such mental disorder for a period of not 
+    less than two years immediately preceding the presentation of the petition;
+
+(e) that the other party has been suffering from a virulent and incurable form of 
+    leprosy;
+
+(f) that the other party has been suffering from venereal disease in a communicable 
+    form;
+
+(g) that the other party has voluntarily caused the suspension of the ordinary 
+    duties of married life, without reasonable excuse, for a period of two years 
+    or upwards.
+
+================================================================================
+CHILD CUSTODY AND GUARDIANSHIP - RIGHTS AND RESPONSIBILITIES
+================================================================================
+
+In custody matters, Indian law prioritizes the welfare and best interests of the 
+child. The courts consider:
+
+1. The physical and emotional health of the child
+2. The stability of each parent's home
+3. The child's preference (if old enough)
+4. The child's relationship with each parent
+5. The capacity of each parent to provide education and care
+
+Types of Custody:
+
+- Sole Custody: Only one parent has guardianship
+- Joint Custody: Both parents share guardianship
+- Alternate Custody: The child lives with each parent alternately
+- Guardian Custody: Guardian other than parents (in case of orphaned children)
+
+================================================================================
+INTELLECTUAL PROPERTY RIGHTS - COPYRIGHT
+================================================================================
+
+Section 12: Copyright Protection Period
+
+The copyright in any literary, dramatic, musical or artistic work shall subsist 
+during the life of the author and for a period of sixty years after his death.
+
+Types of works protected under Copyright:
+
+1. Literary works (books, articles, software)
+2. Dramatic works (plays, choreography)
+3. Musical works (compositions, songs)
+4. Artistic works (paintings, sculptures, drawings)
+5. Cinematograph films
+6. Sound recordings
+
+Infringement Penalties:
+
+- Civil remedies: Injunction, damages, accounts of profits
+- Criminal penalties: Imprisonment up to 3 years and/or fine up to Rs. 2 lakhs
+
+================================================================================
+RIGHT TO INFORMATION ACT, 2005
+================================================================================
+
+Section 2(j): Definition of Right to Information
+
+"Right to information" means the right to information held by or under the 
+control of any public authority, and includes the right to—
+
+(a) inspect work, documents, and records;
+(b) take notes, extracts, or certified copies of documents;
+(c) obtain information in the form of printouts, diskettes, floppies, etc.;
+(d) obtain certified samples of material.
+
+Any citizen of India can file an RTI application to access information about 
+government activities and decisions, subject to certain exemptions for national 
+security and privacy.
+
+Time Limit: Government has to respond within 30 days of receipt of application, 
+or within 48 hours in case of appeals.
+
+================================================================================
+IMPORTANT LEGAL PRINCIPLES
+================================================================================
+
+1. RULE OF LAW
+   No person is above the law. Every person, regardless of status, is subject 
+   to the law and must obey it.
+
+2. NATURAL JUSTICE
+   Every person has the right to fair hearing and unbiased judgment.
+
+3. BURDEN OF PROOF
+   - In criminal cases: "Beyond reasonable doubt" (burden on prosecution)
+   - In civil cases: "Preponderance of probabilities" (burden on petitioner)
+
+4. INNOCENT UNTIL PROVEN GUILTY
+   An accused is presumed innocent until proven guilty in a court of law.
+
+5. HABEAS CORPUS
+   No person can be illegally detained. The right ensures a person can seek 
+   release from unlawful imprisonment.
+
+6. DOCTRINE OF STARE DECISIS
+   Courts follow precedents set by higher courts, ensuring consistency in law.
+
+================================================================================
+LEGAL DISCLAIMER
+================================================================================
+
+This document contains general legal information for educational purposes only. 
+It does not constitute legal advice. The information presented here is based on 
+Indian laws and may be subject to amendments. For specific legal matters, always 
+consult a qualified legal professional or advocate.
+
+This is a sample document for testing the Legal Aid Chatbot system.
+
+================================================================================
+"""
+
+# Print sample content for verification
+if __name__ == "__main__":
+    print("Sample Legal Content for Testing")
+    print("="*80)
+    print(SAMPLE_LEGAL_CONTENT)
+    print("="*80)
+    print(f"Total Characters: {len(SAMPLE_LEGAL_CONTENT)}")

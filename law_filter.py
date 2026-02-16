@@ -57,6 +57,20 @@ LEGAL_KEYWORDS = {
     "sovereign immunity", "doctrine", "principle", "jurisprudence",
 }
 
+# ==================== TAMIL + TANGLISH LEGAL KEYWORDS ====================
+TAMIL_LEGAL_KEYWORDS = {
+    "சட்டம்", "சட்டம்", "நீதிமன்றம்", "வழக்கு", "வழக்குரைஞர்",
+    "வழக்கறிஞர்", "நீதி", "அரசியல் சட்டம்", "உரிமை", "பிரிவு",
+    "விசாரணை", "தண்டனை", "ஜாமீன்", "குற்றம்"
+}
+
+TANGLISH_LEGAL_KEYWORDS = {
+    "sattam", "neethi", "neethimandram", "vazhakku", "vazakku",
+    "vazhakuru", "vazhakar", "urimai", "pirivu", "thandanai",
+    "jameen", "jaameen", "kurram", "kuram", "case", "court", "law",
+    "section", "ipc", "act"
+}
+
 # ==================== NON-LEGAL KEYWORDS (Exclusion List) ====================
 NON_LEGAL_KEYWORDS = {
     # Sports
@@ -117,7 +131,8 @@ def is_legal_query(query: str) -> Tuple[bool, str]:
             return True, "Legal reference detected (pattern match)"
     
     # ==================== STEP 2: Count legal keywords ====================
-    legal_count = sum(1 for keyword in LEGAL_KEYWORDS if f"\\b{keyword}\\b" in query_lower or keyword in query_lower)
+    legal_keywords_all = LEGAL_KEYWORDS | TAMIL_LEGAL_KEYWORDS | TANGLISH_LEGAL_KEYWORDS
+    legal_count = sum(1 for keyword in legal_keywords_all if f"\\b{keyword}\\b" in query_lower or keyword in query_lower)
     non_legal_count = sum(1 for keyword in NON_LEGAL_KEYWORDS if keyword in query_lower)
     
     # ==================== STEP 3: Decision Logic ====================

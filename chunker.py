@@ -3,7 +3,10 @@ Chunking Module - Splits extracted legal text into manageable chunks
 Uses LangChain text splitter for optimal chunking strategy
 """
 
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+try:
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+except Exception:
+    from langchain.text_splitter import RecursiveCharacterTextSplitter
 from typing import List, Dict
 import re
 import logging

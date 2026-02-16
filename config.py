@@ -13,10 +13,13 @@ load_dotenv()
 # Store ONLY secrets in .env
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+# Optional separate key for RAG metrics evaluation (RAGAS).
+GROQ_METRICS_API_KEY = os.getenv("GROQ_METRICS_API_KEY", GROQ_API_KEY)
 
 # ==================== PINECONE CONFIGURATION ====================
 # Pinecone no longer requires environment/region in latest SDK
-PINECONE_INDEX_NAME = "kyl"
+# Allow override via .env so the app can target the actual index name.
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "kyl")
 EMBEDDING_DIMENSION = 384  # sentence-transformers/all-MiniLM-L6-v2
 
 # ==================== LLM CONFIGURATION ====================
@@ -39,16 +42,39 @@ CHUNK_OVERLAP = 100    # Overlap to preserve legal context
 TOP_K_RESULTS = 5
 RETRIEVAL_SCORE_THRESHOLD = 0.5
 
+# ==================== METRICS CONFIGURATION ====================
+# RAGAS metrics only (may be slow, requires extra deps + LLM).
+METRICS_MODE = "ragas"
+METRICS_LLM_MODEL = os.getenv("METRICS_LLM_MODEL", "llama-3.1-8b-instant")
+METRICS_LLM_MAX_TOKENS = int(os.getenv("METRICS_LLM_MAX_TOKENS", "128"))
+METRICS_CONTEXT_TOP_K = int(os.getenv("METRICS_CONTEXT_TOP_K", "1"))
+METRICS_CONTEXT_MAX_CHARS = int(os.getenv("METRICS_CONTEXT_MAX_CHARS", "500"))
+METRICS_ANSWER_MAX_CHARS = int(os.getenv("METRICS_ANSWER_MAX_CHARS", "600"))
+METRICS_TIMEOUT_SECONDS = int(os.getenv("METRICS_TIMEOUT_SECONDS", "120"))
+
 # ==================== LEGAL DISCLAIMER ====================
-LEGAL_DISCLAIMER = "⚖️ This information is for general legal awareness only and does not constitute legal advice."
+LEGAL_DISCLAIMER = "This chatbot provides general legal information only and does not constitute legal advice."
+LEGAL_DISCLAIMER_TA = "இந்த அரட்டையாளர் பொதுவான சட்டத் தகவலை மட்டுமே வழங்குகிறது; இது சட்ட ஆலோசனை அல்ல."
 
 # ==================== LAW-ONLY QUESTION FILTER ====================
-REJECTION_MESSAGE = (
-    "I am designed to provide legal information only. "
-    "Please ask questions related to law."
-)
+REJECTION_MESSAGE = "I am designed exclusively for legal awareness."
+REJECTION_MESSAGE_TA = "நான் சட்ட விழிப்புணர்வுக்காக மட்டுமே வடிவமைக்கப்பட்டுள்ளேன்."
 
 NO_CONTEXT_MESSAGE = "I could not find relevant information in my legal knowledge base for this question."
+UPLOAD_REQUEST_MESSAGE = (
+    "I could not find relevant information in my legal knowledge base for this question. "
+    "Please upload a relevant legal PDF to expand the knowledge base."
+)
+UPLOAD_REQUEST_MESSAGE_TA = (
+    "இந்த கேள்விக்கான தொடர்புடைய தகவல் என் சட்ட அறிவுக் களத்தில் கிடைக்கவில்லை. "
+    "அறிவுக் களத்தை விரிவாக்க தொடர்புடைய சட்ட PDF ஐ பதிவேற்றவும்."
+)
+
+# ==================== LANGUAGE FALLBACK ====================
+TA_LANGUAGE_FALLBACK_MESSAGE = (
+    "தேவையான பதிலை முழுமையாக தமிழில் வழங்க இயலவில்லை. "
+    "தொடர்புடைய சட்ட PDF ஐ பதிவேற்றவும்."
+)
 
 # ==================== LOGGING ====================
 LOG_LEVEL = "INFO"

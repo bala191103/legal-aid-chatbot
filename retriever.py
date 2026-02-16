@@ -260,6 +260,10 @@ class LegalDocumentRetriever:
             return {}
 
 
+# Backward-compat alias for older import typo
+LegalDocumentRetrieve = LegalDocumentRetriever
+
+
 # ==================== TESTING FUNCTION ====================
 if __name__ == "__main__":
     # Sample legal documents

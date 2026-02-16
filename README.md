@@ -404,6 +404,15 @@ A: ResponseValidator ensures every response includes the disclaimer before displ
 - **Embedding Generation:** 50ms per document
 - **Query Validation:** <10ms
 
+### Academic Justification (Evaluation Design)
+We use two complementary evaluation layers:
+1. **Fast Retrieval-Based Metrics (online, instant)**  
+   These scores (similarity, coverage ratio, hallucination risk, context utilization) provide immediate confidence signals about how well the retrieved context supports the answer. They are deterministic, fast, and always available during live chat.
+2. **RAGAS Metrics (offline, LLM-based)**  
+   RAGAS evaluates semantic faithfulness and relevance using an evaluation LLM. This is more expensive, so it is triggered manually and runs asynchronously. It does not block chat responses.
+
+This separation preserves **user experience** while maintaining **academic validity**: online metrics monitor retrieval confidence, while offline RAGAS provides deeper semantic validation for reporting and viva discussions.
+
 ---
 
 ## 🐛 Troubleshooting

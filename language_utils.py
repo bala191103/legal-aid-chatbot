@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Language Utilities - Detect input language and translate responses
 Supports English and Tamil (Unicode) only.
@@ -7,9 +8,13 @@ from __future__ import annotations
 
 import re
 from typing import Optional
+from langdetect import detect, DetectorFactory
 
 
 TAMIL_UNICODE_RE = re.compile(r"[\u0B80-\u0BFF]")
+
+# Ensure deterministic language detection results.
+DetectorFactory.seed = 42
 
 
 def detect_language(text: str) -> str:
@@ -19,7 +24,11 @@ def detect_language(text: str) -> str:
     """
     if TAMIL_UNICODE_RE.search(text):
         return "ta"
-    return "en"
+    try:
+        lang = detect(text)
+        return "ta" if lang == "ta" else "en"
+    except Exception:
+        return "en"
 
 
 def translate_response(text: str, target_language: str, llm_handler: Optional[object]) -> str:

@@ -99,6 +99,7 @@ MANDATORY RULES:
 10. Do not mix languages. If responding in Tamil, use only Tamil script (no Latin letters).
 
 {format_instructions}
+# -*- coding: utf-8 -*-
 """
         
         user_prompt = f"""Based on the following legal context, please answer the user's question.
@@ -289,8 +290,14 @@ class ResponseValidator:
             str: Response with disclaimer
         """
         language = (language or "en").lower()
-        disclaimer = config.LEGAL_DISCLAIMER_TA if language == "ta" else config.LEGAL_DISCLAIMER
-        if disclaimer not in response:
+        if language == "ta":
+            disclaimer_text = config.LEGAL_DISCLAIMER_TA
+            label = "சட்ட அறிவிப்பு"
+        else:
+            disclaimer_text = config.LEGAL_DISCLAIMER
+            label = "Legal Disclaimer"
+        disclaimer = f"**{label}:** {disclaimer_text}"
+        if disclaimer_text not in response:
             response = f"{response}\n\n{disclaimer}"
         
         return response

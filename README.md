@@ -406,12 +406,10 @@ A: ResponseValidator ensures every response includes the disclaimer before displ
 
 ### Academic Justification (Evaluation Design)
 We use two complementary evaluation layers:
-1. **Fast Retrieval-Based Metrics (online, instant)**  
-   These scores (similarity, coverage ratio, hallucination risk, context utilization) provide immediate confidence signals about how well the retrieved context supports the answer. They are deterministic, fast, and always available during live chat.
-2. **RAGAS Metrics (offline, LLM-based)**  
-   RAGAS evaluates semantic faithfulness and relevance using an evaluation LLM. This is more expensive, so it is triggered manually and runs asynchronously. It does not block chat responses.
+1. **Deterministic Proxy Metrics (online, instant)**  
+   These scores (faithfulness/context-grounded, answer relevance from retrieval similarity, context precision, hallucination risk, and overall confidence) provide immediate, explainable signals about how well retrieved context supports the answer. They are deterministic, fast, and always available during live chat.
 
-This separation preserves **user experience** while maintaining **academic validity**: online metrics monitor retrieval confidence, while offline RAGAS provides deeper semantic validation for reporting and viva discussions.
+These deterministic metrics preserve **user experience** while maintaining **academic validity** by providing fast, explainable evaluation suitable for real-time dashboards.
 
 ---
 
